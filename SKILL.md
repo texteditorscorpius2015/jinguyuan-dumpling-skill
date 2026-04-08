@@ -1,7 +1,7 @@
 ---
 name: jinguyuan-dumpling-skill
 description: 金谷园饺子馆信息查询。获取餐厅名称、简介、营业时间、门店地址。用户询问"金谷园在哪"、"营业时间"、"介绍一下金谷园"时使用。
-version: 0.1.1
+version: 0.2.0
 alwaysApply: false
 keywords:
   - 金谷园
