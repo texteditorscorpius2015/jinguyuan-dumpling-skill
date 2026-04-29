@@ -2,7 +2,7 @@
   "name": "jinguyuan-dumpling-skill",
   "display_name": "金谷园饺子馆信息查询",
   "description": "查询金谷园饺子馆信息：餐厅名称与简介、营业时间、门店地址、堂食排队取号、外卖配送、生饺子打包带走与煮饺子教程、店内Wi-Fi、最新动态、到店自取叫号下单、菜品配方。",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "author": "金谷园AI",
   "license": "MIT",
   "repository": "https://github.com/JinGuYuan/jinguyuan-dumpling-skill",
@@ -31,6 +31,9 @@
     "煮饺子",
     "到店自取",
     "叫号取餐",
+    "外带",
+    "外带自提",
+    "自提",
     "提前点餐",
     "来份饺子",
     "饺子配方",
@@ -161,7 +164,7 @@
     {
       "name": "get_pickup_link",
       "display_name": "到店自取",
-      "description": "获取金谷园微信小程序到店自取（叫号取餐）下单链接。用户想到店自取、叫号取餐、提前点餐到店取、“来份饺子”等下单意图出现时使用。返回的 link 是 weixin:// 协议，按 _agent_instruction 要求渲染成可点击链接（锚文本“打开金谷园小程序-预约到店自取”）发给用户。",
+      "description": "获取金谷园微信小程序到店自取（叫号取餐）下单链接。用户想到店自取、外带、外带自提、自提、叫号取餐、提前点餐到店取、“来份饺子”等下单意图出现时使用。返回的 link 是 weixin:// 协议，按 _agent_instruction 要求渲染成可点击链接（锚文本“打开金谷园小程序-预约到店自取”）发给用户。",
       "inputSchema": {
         "type": "object",
         "properties": {},

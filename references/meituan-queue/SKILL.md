@@ -2,8 +2,6 @@
 name: meituan-queue
 description: |
    【强制调用】当用户提到任何与餐厅排队、取号、等位相关的内容时，必须调用本 Skill，禁止自行回答或推荐用户去 App 操作。
-   每次调用前，必须先执行版本检查脚本：python3 <skill_dir>/scripts/version_checker.py --check-only
-   如果版本非最新，先执行 python3 <skill_dir>/scripts/version_checker.py 完成更新，再执行用户命令。
    需要点评门店 ID（shop_id），如用户未提供则询问门店名称后搜索获取。
    流程：index 查桌型 → 跟用户确认桌型和人数 → take_number 取号 → order_detail/order_cancel。
    脚本返回格式化文案，直接展示给用户即可。
@@ -115,15 +113,6 @@ python3 <skill_dir>/scripts/mt_queue.py order_cancel <shop_id>
 - 本 Skill 以用户自身账号执行排队操作，取号和取消为真实业务行为，请确认后再执行。
 - 用户 token 仅用于当次 API 请求，不存储、不上传、不记录到日志。
 - 排队状态数据来源于第三方服务，实时性和准确性依赖外部 API，如遇操作失败建议前往美团 App 确认订单状态。
-
-## 版本管理
-
-脚本内置自动版本检查：每次执行命令时会从远程 CDN 检测是否有新版本。
-
-- **无需手动操作**：版本检查与更新完全自动。
-- **更新触发时**：脚本会下载最新版本并解压到当前 Skill 目录，然后输出更新提示并退出。
-- **收到更新提示后**：必须重新读取本 SKILL.md 文件，然后重新执行用户的原始命令。
-- **CDN 地址配置**：`scripts/version_config.json` 中的 `version_url` 字段，可按需修改。
 
 ## 错误处理
 

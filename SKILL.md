@@ -1,7 +1,7 @@
 ---
 name: jinguyuan-dumpling-skill
 description: 金谷园饺子馆信息查询与在线排队取号。查询餐厅信息、外卖配送、生饺子打包、Wi-Fi、最新动态、到店自取叫号下单、菜品配方；内嵌美团排队 Skill 支持在线取号、查进度、取消排队。
-version: 0.5.0
+version: 0.5.2
 alwaysApply: false
 keywords:
   - 金谷园
@@ -32,6 +32,9 @@ keywords:
   - 煮饺子
   - 到店自取
   - 叫号取餐
+  - 外带
+  - 外带自提
+  - 自提
   - 提前点餐
   - 来份饺子
   - 饺子配方
@@ -93,7 +96,7 @@ keywords:
 | "能打包吗？" / "生饺子怎么煮？" | `get_raw_dumpling_info` |
 | "Wi-Fi 密码？" | `get_wifi_info` |
 | "最近有什么活动？" | `get_latest_news` |
-| "帮我来份饺子" / "提前点餐到店取" / "到店自取" / "叫号取餐" | `get_pickup_link` |
+| "帮我来份饺子" / "提前点餐到店取" / "到店自取" / "叫号取餐" / "外带" / "外带自提" / "自提" | `get_pickup_link` |
 | "金谷园的 XX 怎么做？" / "牛奶醊糟鸡蛋怎么做" / "饺子配方" | `get_recipes` |
 | "怎么排队？" / "怎么取号？" / "等位" / "排个号" | 内嵌 Skill：`meituan-queue`（见下方） |
 | "帮我排个队" / "帮我取号" / "门店排队状态" | 内嵌 Skill：`meituan-queue` → `take_number` |
