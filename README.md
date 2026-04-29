@@ -1,6 +1,6 @@
 # 金谷园饺子馆 AI Skill
 
-![Version](https://img.shields.io/badge/version-0.4.4-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![MCP](https://img.shields.io/badge/protocol-MCP-purple) ![Transport](https://img.shields.io/badge/transport-Streamable%20HTTP-orange)
+![Version](https://img.shields.io/badge/version-0.5.0-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![MCP](https://img.shields.io/badge/protocol-MCP-purple) ![Transport](https://img.shields.io/badge/transport-Streamable%20HTTP-orange)
 
 这是一个 AI Skill——安装后，你的 AI 助手就能查询金谷园饺子馆的信息：在哪吃、几点开门、怎么排队、能不能外卖、生饺子怎么煮、Wi-Fi 密码是什么。还能直接帮你在美团上排队取号。
 
@@ -19,7 +19,7 @@
 
 ## 这个 Skill 能做什么
 
-金谷园饺子馆的官方信息服务，包含 5 项 MCP 查询能力 + 1 项内嵌排队能力：
+金谷园饺子馆的官方信息服务，包含多项 MCP 查询/下单能力 + 1 项内嵌排队能力（完整工具列表以 `tools/list` 返回为准）：
 
 | 能力 | 你可以问 | 来源 |
 |------|----------|------|
@@ -28,6 +28,8 @@
 | 生饺子打包 | "能打包吗？""生饺子怎么煮？" | MCP |
 | 店内Wi-Fi | "Wi-Fi密码多少？" | MCP |
 | 最新消息 | "有什么新活动？" | MCP |
+| **到店自取** | "帮我来份饺子""提前点餐到店取" | MCP |
+| 菜品配方 | "金谷园的 XX 怎么做？" | MCP |
 | **在线排队取号** | "帮我排个队""取消排队""排队进度" | 内嵌 Skill |
 
 ## 在线排队取号
@@ -119,7 +121,7 @@ git clone https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill.git \
 
 ## 版本
 
-当前版本：0.4.4
+当前版本：0.5.0
 
 > 说明：本 Skill 版本与内嵌排队组件（meituan-queue）版本独立演进，互不影响。
 

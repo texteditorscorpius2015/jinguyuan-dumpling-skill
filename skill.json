@@ -1,8 +1,8 @@
 {
   "name": "jinguyuan-dumpling-skill",
   "display_name": "金谷园饺子馆信息查询",
-  "description": "查询金谷园饺子馆信息：餐厅名称与简介、营业时间、门店地址、外卖配送、生饺子打包带走与煮饺子教程、店内Wi-Fi、最新动态。",
-  "version": "0.4.4",
+  "description": "查询金谷园饺子馆信息：餐厅名称与简介、营业时间、门店地址、堂食排队取号、外卖配送、生饺子打包带走与煮饺子教程、店内Wi-Fi、最新动态、到店自取叫号下单、菜品配方。",
+  "version": "0.5.0",
   "author": "金谷园AI",
   "license": "MIT",
   "repository": "https://github.com/JinGuYuan/jinguyuan-dumpling-skill",
@@ -28,7 +28,13 @@
     "北京饺子",
     "海淀美食",
     "生饺子",
-    "煮饺子"
+    "煮饺子",
+    "到店自取",
+    "叫号取餐",
+    "提前点餐",
+    "来份饺子",
+    "饺子配方",
+    "自家散饺子"
   ],
   "mcp_server": {
     "transport": "streamable-http",
@@ -103,6 +109,59 @@
       "name": "get_latest_news",
       "display_name": "最新消息",
       "description": "获取金谷园饺子馆最新动态。用户询问“有什么新消息”、“最近有什么活动”时使用。返回最新公告信息。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_queue_info",
+      "display_name": "堂食排队取号",
+      "description": "获取金谷园饺子馆堂食排队取号方式。用户询问“怎么排队”、“怎么取号”、“怎么到店吃”时使用。返回取号渠道（美团排队、到店前台）和支持的门店。若需在线取号/查进度/取消排队，请使用内嵌的 meituan-queue Skill。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_recipes",
+      "display_name": "菜品配方查询",
+      "description": "查询金谷园公开的菜品配方。不传参数返回配方列表，传入 recipe_id 返回具体做法。用户询问“XX 怎么做”、“XX 的配方”、“金谷园的 XX 是怎么做的”时使用。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "配方 ID，不传则返回所有配方列表"
+          }
+        },
+        "required": []
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_pickup_link",
+      "display_name": "到店自取",
+      "description": "获取金谷园微信小程序到店自取（叫号取餐）下单链接。用户想到店自取、叫号取餐、提前点餐到店取、“来份饺子”等下单意图出现时使用。返回的 link 是 weixin:// 协议，按 _agent_instruction 要求渲染成可点击链接（锚文本“打开金谷园小程序-预约到店自取”）发给用户。",
       "inputSchema": {
         "type": "object",
         "properties": {},
